@@ -13,9 +13,9 @@ application {
 }
 
 checkstyle {
-    toolVersion = "10.12.1"  // Актуальная версия
+    toolVersion = "10.12.1" 
     configFile = file("config/checkstyle/checkstyle.xml")
-    isIgnoreFailures = false  // Фатальная ошибка при нарушениях
+    isIgnoreFailures = false
 }
 
 tasks.getByName("run", JavaExec::class) {
