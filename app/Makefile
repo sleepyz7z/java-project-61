@@ -6,3 +6,6 @@ clean:
 
 build:
 	./gradlew clean build
+
+lint:
+	./gradlew checkstyleMain
