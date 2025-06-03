@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Calc {
     public static void playCalc() {
         Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
         System.out.println("");
         System.out.println("Welcome to the Brain Games!");
@@ -15,7 +16,6 @@ public class Calc {
 
         System.out.println("What is the result of the expression?");
 
-        Random random = new Random();
         int correctAnswers = 0;
 
         while (correctAnswers < 3) {                   // Цикл идет пока не будет выведено 3 вопроса

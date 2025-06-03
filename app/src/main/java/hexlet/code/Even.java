@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Even {
     public static void playEven() {
         Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
         System.out.println("");
         System.out.println("Welcome to the Brain Games!");
@@ -15,10 +16,9 @@ public class Even {
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 
-        Random random = new Random();
         int correctAnswers = 0;
 
-        while (correctAnswers < 4) {                   // Цикл идет пока не будет выведено 4 вопроса
+        while (correctAnswers < 3) {                   // Цикл идет пока не будет выведено 3 вопроса
             int number = random.nextInt(50);    // Генерируем число до указанного значения
             System.out.println("Question: " + number);
             System.out.print("Your answer: ");

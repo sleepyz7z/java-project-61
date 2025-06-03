@@ -3,8 +3,8 @@ package hexlet.code;
 import java.util.Random;
 import java.util.Scanner;
 
-public class GCD {
-    public static void playGCD() {
+public class Prime {
+    public static void playPrime() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
@@ -14,18 +14,16 @@ public class GCD {
         String userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
 
-        System.out.println("Find the greatest common divisor of given numbers.");
+        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
         int correctAnswers = 0;
 
         while (correctAnswers < 3) {                   // Цикл идет пока не будет выведено 3 вопроса
-            int number1 = random.nextInt(101);    // Генерируем число до указанного значения
-            int number2 = random.nextInt(101);
-            System.out.println("Question: " + number1 + " " + number2);
+            int number = random.nextInt(50);    // Генерируем число до указанного значения
+            System.out.println("Question: " + number);
             System.out.print("Your answer: ");
             String answer = scanner.nextLine();
-
-            String correctAnswer = findGcd(number1, number2);
+            String correctAnswer = isPrime(number) ? "yes" : "no";
 
             if (answer.equals(correctAnswer)) {
                 System.out.println("Correct!");
@@ -41,14 +39,22 @@ public class GCD {
 
         scanner.close();
     }
-
-    private static String findGcd(int number1, int number2) {
-        while (number2 != 0) {
-            int temp = number2;
-            number2 = number1 % number2;
-            number1 = temp;
+    private static boolean isPrime(int number) {
+        if (number < 2) {
+            return false;
         }
-        return Integer.toString(number1);
+        if (number == 2) {
+            return true;
+        }
+        if (number % 2 == 0) {
+            return false;
+        }
+
+        for (int i = 3; i < number; i += 2) { // Упрощенная проверка (до n вместо √n)
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
-
