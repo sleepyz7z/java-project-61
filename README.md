@@ -6,6 +6,30 @@
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=sleepyz7z_java-project-61&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=sleepyz7z_java-project-61)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=sleepyz7z_java-project-61&metric=coverage)](https://sonarcloud.io/summary/new_code?id=sleepyz7z_java-project-61)
 
+## Start
+
+```bash
+make
+```
+
+## Setup
+
+```bash
+make build
+```
+
+## Run
+
+```bash
+make run
+```
+
+## Run checkstyle
+
+```bash
+make lint
+```
+
 Игра Even:
 https://asciinema.org/a/dmvW7gYkX7neBWj7Rj8fcdA95
 
