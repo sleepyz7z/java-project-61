@@ -4,7 +4,12 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=sleepyz7z_java-project-61&metric=bugs)](https://sonarcloud.io/summary/new_code?id=sleepyz7z_java-project-61)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=sleepyz7z_java-project-61&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=sleepyz7z_java-project-61)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=sleepyz7z_java-project-61&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=sleepyz7z_java-project-61)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=sleepyz7z_java-project-61&metric=coverage)](https://sonarcloud.io/summary/new_code?id=sleepyz7z_java-project-61)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=sleepyz7z_java-project-61&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=sleepyz7z_java-project-61)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=sleepyz7z_java-project-61&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=sleepyz7z_java-project-61)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=sleepyz7z_java-project-61&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=sleepyz7z_java-project-61)
+[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=sleepyz7z_java-project-61&metric=sqale_index)](https://sonarcloud.io/summary/new_code?id=sleepyz7z_java-project-61)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=sleepyz7z_java-project-61&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=sleepyz7z_java-project-61)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=sleepyz7z_java-project-61&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=sleepyz7z_java-project-61)
 
 ## Start
 
@@ -31,16 +36,16 @@ make lint
 ```
 
 Игра Even:
-https://asciinema.org/a/dmvW7gYkX7neBWj7Rj8fcdA95
+https://asciinema.org/a/GckikeWETcQGiybDqPgLjBIPW
 
 Игра Calc:
-https://asciinema.org/a/Ycb6OCzKfpzFAdmbNVUmi8jjN
+https://asciinema.org/a/1NkXrdnYftnII5jsQRBZsW6lK
 
 Игра GCD:
-https://asciinema.org/a/dGWa1M0IsM9EuyvzIvsuv7pRt
+https://asciinema.org/a/AdBrSqSmFSm6F6iLDSqbmTBFX
 
 Игра Progression:
-https://asciinema.org/a/kzHigEzLfIlS18BXvwvXB2Z8b
+https://asciinema.org/a/rPd98e0Ih9zqWv9OSJyJajbcf
 
-Игрв Prime:
-https://asciinema.org/a/6OrT40jrzhWluhx4WfY5d3ZHB
+Игра Prime:
+https://asciinema.org/a/EuuTh4VGkGniKWlU72UYhum7Q

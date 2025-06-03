@@ -1,5 +1,10 @@
 package hexlet.code;
 
+import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
+import hexlet.code.games.Gcd;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
@@ -16,30 +21,30 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
-        int gameID = scanner.nextInt();
+        int choice = scanner.nextInt();
+        System.out.println();
 
-        switch (gameID) {
+        switch (choice) {
             case 1:
-                Cli.getUser();
+                Cli.greet();
                 break;
             case 2:
-                Even.playEven();
+                Even.play();
                 break;
             case 3:
-                Calc.playCalc();
+                Calc.play();
                 break;
             case 4:
-                GCD.playGCD();
+                Gcd.play();
                 break;
             case 5:
-                Progression.playProgression();
+                Progression.play();
                 break;
             case 6:
-                Prime.playPrime();
+                Prime.play();
                 break;
             case 0:
-                System.out.println("Goodbye!");
-                break;
+                return;
             default:
                 System.out.println("Invalid choice");
         }
