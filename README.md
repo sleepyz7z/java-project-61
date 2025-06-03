@@ -10,3 +10,6 @@ https://asciinema.org/a/Ycb6OCzKfpzFAdmbNVUmi8jjN
 
 Игра GCD:
 https://asciinema.org/a/dGWa1M0IsM9EuyvzIvsuv7pRt
+
+Игра Progression:
+https://asciinema.org/a/kzHigEzLfIlS18BXvwvXB2Z8b
