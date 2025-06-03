@@ -39,7 +39,6 @@ public class Even {
 
         System.out.println("Congratulations, " + userName + "!");
 
-
         scanner.close();
     }
 }
