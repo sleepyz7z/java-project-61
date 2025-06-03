@@ -10,6 +10,7 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
+        System.out.println("4 - GCD");
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
@@ -24,6 +25,9 @@ public class App {
                 break;
             case 3:
                 Calc.playCalc();
+                break;
+            case 4:
+                GCD.playGCD();
                 break;
             case 0:
                 System.out.println("Goodbye!");

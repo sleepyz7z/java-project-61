@@ -7,3 +7,6 @@ https://asciinema.org/a/dmvW7gYkX7neBWj7Rj8fcdA95
 
 Игра Calc:
 https://asciinema.org/a/Ycb6OCzKfpzFAdmbNVUmi8jjN
+
+Игра GCD:
+https://asciinema.org/a/dGWa1M0IsM9EuyvzIvsuv7pRt
