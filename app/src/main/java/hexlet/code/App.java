@@ -21,29 +21,29 @@ public class App {
         System.out.println("0 - Exit");
         System.out.print("Your choice: ");
 
-        int choice = scanner.nextInt();
+        String choice = scanner.nextLine();
         System.out.println();
 
         switch (choice) {
-            case 1:
+            case "1":     // Greet
                 Cli.greet();
                 break;
-            case 2:
+            case "2":     // Even
                 Even.play();
                 break;
-            case 3:
+            case "3":     // Calc
                 Calc.play();
                 break;
-            case 4:
+            case "4":     // GCD
                 Gcd.play();
                 break;
-            case 5:
+            case "5":     // Progression
                 Progression.play();
                 break;
-            case 6:
+            case "6":     // Prime
                 Prime.play();
                 break;
-            case 0:
+            case "0":     // Exit
                 return;
             default:
                 System.out.println("Invalid choice");
