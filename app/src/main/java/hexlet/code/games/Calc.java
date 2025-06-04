@@ -4,34 +4,44 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Calc {
+    // Константы для настройки игры
+    private static final int ROUNDS_COUNT = 3;
+    private static final int MAX_OPERAND_VALUE = 50;
+    private static final char[] OPERATORS = {'+', '-', '*'};
+
+    // Сообщения
+    private static final String RULE = "What is the result of the expression?";
+    private static final String UNKNOWN_OPERATOR_MSG = "Unknown operator: ";
+
     public static void play() {
-        String rule = "What is the result of the expression?";
-        String[][] rounds = new String[3][2];
+        String[][] rounds = new String[ROUNDS_COUNT][2];
         Random random = new Random();
-        char[] operators = {'+', '-', '*'};
 
-        for (int i = 0; i < 3; i++) {           // Цикл идет пока не будет выведено 3 вопроса
-            int a = random.nextInt(50);        // Генерируем число до указанного значения
-            int b = random.nextInt(50);        // Генерируем число до указанного значения
-            char operator = operators[random.nextInt(3)];
+        for (int i = 0; i < rounds.length; i++) {
+            int firstOperand = random.nextInt(MAX_OPERAND_VALUE);
+            int secondOperand = random.nextInt(MAX_OPERAND_VALUE);
+            char operator = OPERATORS[random.nextInt(OPERATORS.length)];
 
-            String question = a + " " + operator + " " + b;
-            String answer = calculate(a, b, operator);
+            String question = firstOperand + " " + operator + " " + secondOperand;
+            String answer = calculate(firstOperand, secondOperand, operator);
 
             rounds[i][0] = question;
             rounds[i][1] = answer;
         }
 
-        Engine.play(rule, rounds);
+        Engine.play(RULE, rounds);
     }
 
     private static String calculate(int a, int b, char operator) {
-        return switch (operator) {
-            case '+' -> Integer.toString(a + b);
-            case '-' -> Integer.toString(a - b);
-            case '*' -> Integer.toString(a * b);
-            default -> throw new RuntimeException("Unknown operator: " + operator);
-        };
+        switch (operator) {
+            case '+':
+                return Integer.toString(a + b);
+            case '-':
+                return Integer.toString(a - b);
+            case '*':
+                return Integer.toString(a * b);
+            default:
+                throw new RuntimeException(UNKNOWN_OPERATOR_MSG + operator);
+        }
     }
 }
-

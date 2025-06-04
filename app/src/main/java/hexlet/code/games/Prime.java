@@ -4,13 +4,23 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Prime {
+    // Константы для настройки игры
+    private static final int ROUNDS_COUNT = 3;
+    private static final int MIN_NUMBER = 1;
+    private static final int MAX_NUMBER = 100;
+
+    // Константы для проверки простых чисел
+    private static final int FIRST_PRIME_NUMBER = 2;
+    private static final int DIVISOR_STEP = 2; // Проверяем только нечётные делители
+
     public static void play() {
         String rule = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[][] rounds = new String[3][2];
+
+        String[][] rounds = new String[ROUNDS_COUNT][2];
         Random random = new Random();
 
-        for (int i = 0; i < 3; i++) {                       // Цикл идет пока не будет выведено 3 вопроса
-            int number = random.nextInt(100) + 1;      //Генерируем число до указанного значения
+        for (int i = 0; i < rounds.length; i++) {
+            int number = random.nextInt(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER;
             String question = Integer.toString(number);
             String answer = isPrime(number) ? "yes" : "no";
 
@@ -22,16 +32,16 @@ public class Prime {
     }
 
     private static boolean isPrime(int number) {
-        if (number < 2) {
+        if (number < FIRST_PRIME_NUMBER) {
             return false;
         }
-        if (number == 2) {
+        if (number == FIRST_PRIME_NUMBER) {
             return true;
         }
-        if (number % 2 == 0) {
+        if (number % FIRST_PRIME_NUMBER == 0) {
             return false;
         }
-        for (int i = 3; i * i <= number; i += 2) {
+        for (int i = 3; i * i <= number; i += DIVISOR_STEP) {
             if (number % i == 0) {
                 return false;
             }
