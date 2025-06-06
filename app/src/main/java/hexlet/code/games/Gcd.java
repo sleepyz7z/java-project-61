@@ -5,13 +5,12 @@ import java.util.Random;
 
 public class Gcd {
     // Константы для настройки игры
-    private static final int ROUNDS_COUNT = 3;
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 100;
+    private static final String RULE = "Find the greatest common divisor of given numbers.";
 
     public static void play() {
-        String rule = "Find the greatest common divisor of given numbers.";
-        String[][] rounds = new String[ROUNDS_COUNT][2];
+        String[][] rounds = new String[Engine.getRoundsCount()][2];
         Random random = new Random();
 
         for (int i = 0; i < rounds.length; i++) {
@@ -25,7 +24,7 @@ public class Gcd {
             rounds[i][1] = answer;
         }
 
-        Engine.play(rule, rounds);
+        Engine.play(RULE, rounds);
     }
 
     private static int calculateGcd(int a, int b) {

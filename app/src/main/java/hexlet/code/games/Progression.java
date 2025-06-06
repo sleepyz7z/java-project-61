@@ -5,17 +5,16 @@ import java.util.Random;
 
 public class Progression {
     // Константы для настройки игры
-    private static final int ROUNDS_COUNT = 3;
     private static final int MIN_PROGRESSION_LENGTH = 5;
     private static final int MAX_PROGRESSION_LENGTH = 10;
     private static final int MIN_START_VALUE = 1;
     private static final int MAX_START_VALUE = 20;
     private static final int MIN_STEP_VALUE = 1;
     private static final int MAX_STEP_VALUE = 10;
+    private static final String RULE = "What number is missing in the progression?";
 
     public static void play() {
-        String rule = "What number is missing in the progression?";
-        String[][] rounds = new String[ROUNDS_COUNT][2];
+        String[][] rounds = new String[Engine.getRoundsCount()][2];
         Random random = new Random();
 
         for (int i = 0; i < rounds.length; i++) {
@@ -33,7 +32,7 @@ public class Progression {
             rounds[i][1] = answer;
         }
 
-        Engine.play(rule, rounds);
+        Engine.play(RULE, rounds);
     }
 
     private static String[] generateProgression(int start, int step, int length) {

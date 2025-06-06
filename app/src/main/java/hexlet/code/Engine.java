@@ -3,6 +3,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+    private static final int ROUNDS_COUNT = 3;
+
     public static void play(String rule, String[][] rounds) {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
@@ -25,5 +27,9 @@ public class Engine {
         }
 
         System.out.println("Congratulations, " + name + "!");
+    }
+
+    public static int getRoundsCount() {
+        return ROUNDS_COUNT;
     }
 }

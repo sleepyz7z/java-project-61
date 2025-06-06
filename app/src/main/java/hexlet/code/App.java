@@ -46,7 +46,8 @@ public class App {
             case "0":     // Exit
                 return;
             default:
-                System.out.println("Invalid choice");
+                System.out.println("Error: Invalid choice \"" + choice + "\"" + ". Please enter a number from 0 to 6");
+                break;
         }
     }
 }

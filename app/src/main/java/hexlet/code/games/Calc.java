@@ -5,16 +5,13 @@ import java.util.Random;
 
 public class Calc {
     // Константы для настройки игры
-    private static final int ROUNDS_COUNT = 3;
     private static final int MAX_OPERAND_VALUE = 50;
     private static final char[] OPERATORS = {'+', '-', '*'};
-
-    // Сообщения
     private static final String RULE = "What is the result of the expression?";
     private static final String UNKNOWN_OPERATOR_MSG = "Unknown operator: ";
 
     public static void play() {
-        String[][] rounds = new String[ROUNDS_COUNT][2];
+        String[][] rounds = new String[Engine.getRoundsCount()][2];
         Random random = new Random();
 
         for (int i = 0; i < rounds.length; i++) {
