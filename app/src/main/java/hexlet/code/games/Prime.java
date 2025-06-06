@@ -37,7 +37,7 @@ public class Prime {
         if (number % FIRST_PRIME_NUMBER == 0) {
             return false;
         }
-        for (int i = 3; i * i <= number; i += DIVISOR_STEP) {
+        for (int i = Engine.getRoundsCount(); i * i <= number; i += DIVISOR_STEP) {
             if (number % i == 0) {
                 return false;
             }
