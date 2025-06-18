@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class Prime {
     // Константы для настройки игры
@@ -10,13 +10,13 @@ public class Prime {
     private static final String RULE = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final int FIRST_PRIME_NUMBER = 2;
     private static final int DIVISOR_STEP = 2;
+    private static final int ODD_NUMBER_FROM_THREE = 3;
 
     public static void play() {
-        String[][] rounds = new String[Engine.getRoundsCount()][2];
-        Random random = new Random();
+        String[][] rounds = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < rounds.length; i++) {
-            int number = random.nextInt(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER;
+            int number = Utils.generateNumber(MIN_NUMBER, MAX_NUMBER);
             String question = Integer.toString(number);
             String answer = isPrime(number) ? "yes" : "no";
 
@@ -37,7 +37,7 @@ public class Prime {
         if (number % FIRST_PRIME_NUMBER == 0) {
             return false;
         }
-        for (int i = Engine.getRoundsCount(); i * i <= number; i += DIVISOR_STEP) {
+        for (int i = ODD_NUMBER_FROM_THREE; i * i <= number; i += DIVISOR_STEP) {
             if (number % i == 0) {
                 return false;
             }

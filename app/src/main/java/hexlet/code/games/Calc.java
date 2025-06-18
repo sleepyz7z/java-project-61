@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import java.util.Random;
+import hexlet.code.Utils;
 
 public class Calc {
     // Константы для настройки игры
@@ -11,13 +11,12 @@ public class Calc {
     private static final String UNKNOWN_OPERATOR_MSG = "Unknown operator: ";
 
     public static void play() {
-        String[][] rounds = new String[Engine.getRoundsCount()][2];
-        Random random = new Random();
+        String[][] rounds = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < rounds.length; i++) {
-            int firstOperand = random.nextInt(MAX_OPERAND_VALUE);
-            int secondOperand = random.nextInt(MAX_OPERAND_VALUE);
-            char operator = OPERATORS[random.nextInt(OPERATORS.length)];
+            int firstOperand = Utils.generateNumber(MAX_OPERAND_VALUE);
+            int secondOperand = Utils.generateNumber(MAX_OPERAND_VALUE);
+            char operator = OPERATORS[Utils.generateNumber(OPERATORS.length - 1)];
 
             String question = firstOperand + " " + operator + " " + secondOperand;
             String answer = calculate(firstOperand, secondOperand, operator);
